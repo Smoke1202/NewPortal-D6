@@ -1,0 +1,40 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="argparse._AppendConstAction" />
+          <option value="argparse._CountAction" />
+          <option value="argparse._StoreConstAction" />
+          <option value="argparse._SubParsersAction" />
+          <option value="types.ModuleType.Command" />
+          <option value="newspaper.news.models.Author.post_set" />
+          <option value="django.db.models.fields.related.OneToOneField.comment_set" />
+          <option value="django.db.models.fields.CharField.title" />
+          <option value="project.simpleapp.models.Product.objects" />
+          <option value="project.simpleapp.models.News.objects" />
+          <option value="django.contrib.admin.utils.lookup_spawns_duplicates" />
+          <option value="project.simpleapp.views.Products.objects" />
+          <option value="project.simpleapp.models.Category.objects" />
+          <option value="project.simpleapp.views.ProductList.form_class" />
+          <option value="project.simpleapp.views.SearchList.qs" />
+          <option value="project.simpleapp.views.ProductList.get_filter" />
+          <option value="project.simpleapp.views.ProductList.GET" />
+          <option value="django.template.backends.django.forms" />
+          <option value="django.forms.forms.ModelForm" />
+          <option value="project.simpleapp.views.*" />
+          <option value="django.forms.forms.ModelChoiceField" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

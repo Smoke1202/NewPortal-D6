@@ -1,0 +1,17 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+Delete
+{% endblock title %}
+
+{% block content %}
+<h2>Вы действительно хотите удалить данную новость?</h2>
+        <div class="brd">
+            <p align="left">{{ new.title }}{{new.date_posted|date:'d M Y'}}</p>
+            <p align="left">{{ new.text }}</p>
+            <p align="left"> <a href="/news/">Назад к списку новостей</a> </p>
+        </div>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="подтвердить"></form>
+{% endblock content %}
