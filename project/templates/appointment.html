@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><h4>Здравствуй, {{ appointment.author }} Новая статья в твоём любимом разделе!</h4></p>
+    <h2> Название статьи: {{ appointment.title }}</h2><br>
+    <h7> {{ appointment.text|truncatechars:50 }}</h7><br><br>
+    <h7> Категории:</h7><br><br>
+    {%   for name in appointment.category.all %}
+
+    <h7> {{ name.name }}</h7><br>
+    {%   endfor  %}<br>
+    </li>
+            <a href="{{ link }}">Ссылка на статью</a>
+    </li><br><br>
+
+    <h7> С уважением, команда NewPortal</h7>
+    {% endblock content %}
+</body>
+</html>

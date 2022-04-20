@@ -2,11 +2,12 @@ from django.shortcuts import render
 from .forms import PostForm
 from django.core.paginator import Paginator
 from .models import Post, Category
-from datetime import datetime
-from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
+from datetime import datetime, timedelta
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView, View
 from .filters import PostFilter
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
 
 class PostList(ListView):

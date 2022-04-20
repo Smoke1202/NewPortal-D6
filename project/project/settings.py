@@ -136,7 +136,12 @@ EMAIL_HOST_PASSWORD = 'Zonuhi9.qwertyuiop'  # пароль от почты
 EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
 SERVER_EMAIL = 'Christopherga@yandex.ru'  # это будет у нас вместо аргумента FROM в массовой рассылке
 DEFAULT_FROM_EMAIL = 'Christopherga@yandex.ru'
+MANAGERS = [
+    ('den.platov.1999', 'den.platov.1999@mail.ru'),
+]
 
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
+APSCHEDULER_RUN_NOW_TIMEOUT = 25
 
 ACCOUNT_FORMS = {'signup': 'sign.models.BasicSignupForm'}
 ACCOUNT_EMAIL_REQUIRED = True
@@ -144,6 +149,14 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+
+CELERY_BROKER_URL = 'redis://:pdncKuiTo02vqm0Zczhg8BMY9Yg1Thk7@redis-19761.c73.us-east-1-2.ec2.cloud.redislabs.com:19761/#10980901'
+CELERY_RESULT_BACKEND = 'redis://:pdncKuiTo02vqm0Zczhg8BMY9Yg1Thk7@redis-19761.c73.us-east-1-2.ec2.cloud.redislabs.com:19761/#10980901'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+BROKER_POOL_LIMIT=0
 
 
 # Static files (CSS, JavaScript, Images)
